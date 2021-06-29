@@ -1,0 +1,29 @@
+<h1>Listado de Posts</h1>
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Date</th>
+        <th scope="col">Image</th>
+        <th scope="col">Content</th>
+      </tr>
+    </thead>
+
+    <% @posts.each do |post| %>
+
+    <tbody>
+        <tr>
+            <td><%= post.title %></td>
+            <td><%= post.created_at.strftime("%d/%m/%Y") %></td>
+            <td><%= image_tag(post.image_url, style: 'width: 100px') %></td>
+            <td><%= post.content %></td>
+        </tr>
+    </tbody>
+
+    <%end%>
+  </table>
+  
+  
+
+

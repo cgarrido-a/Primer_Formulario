@@ -1,0 +1,28 @@
+<div class="container m-auto">
+
+    <%= form_with(model: @post, local: true, html: {id: 'create_posts'}) do |form| %>
+
+    <div>
+        <%= form.label :title %><br>
+        <%= form.text_field :title, required: true %>
+    </div>
+
+    <div>
+        <%= form.label :image_url %><br>
+        <%= form.text_field :image_url, required: true %>
+    </div>
+
+    <div>
+        <%= form.label :content %><br>
+        <%= form.text_area :content, required: true %>
+    </div>
+
+    <div>
+        <%= form.submit "Guardar" %>
+    </div>
+
+
+
+    <% end %>
+
+</div>
